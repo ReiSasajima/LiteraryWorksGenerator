@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap' );
+html{
+  background-color: white;
+  margin: 0 0 0 0;
+}
+div.main{
+  text-align: center;
+  justify-content: center;
+  background-color: white;
+}
+/* サービスタイトル */
+p#service-title{
+  font-family: heisei-mincho-std, serif;
+  font-weight: 900;
+  transform: scale(0.7, 1);
+  font-style: normal;
+  font-feature-settings: "palt" 1;
+  color: black;
+  font-size: 60px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding: 0 0 0 0;
+  text-align: center;
+}
+form{
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+label{
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+input[type="text"]{
+  background-color: white;
+  font-size: xx-large;  
+  width: 35%;
+  height: 30px;
+  border-radius: 5px;
+  border: solid 2px black;
+}
+input[type="text"]::placeholder{
+  text-align: center;
+}
+/* 表示切り替えボタン */
+button{
+  background-image: url('icons/90rotate.png');
+  background-color: #F36E3A;
+  color: white;
+  width: 10%;
+  height: 35px;
+  border-radius: 5px;
+  vertical-align: top;
+  border: none;
+  margin-left: 5px;
+  font-size: x-large;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  cursor: pointer;
+}
+button:hover{
+  background-color: white;
+  color: #F36E3A;
+  border: solid 3px #F36E3A;
+}
+/* ダウンロードボタン */
+input[type='button']{
+  background-color: #45BCD8;
+  color: white;
+  font-weight: 500;
+  font-size: larger ;
+  width: 57%;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+input[type='button']:hover{
+  background-color: white;
+  color: #45BCD8;
+  border: solid 3px #45BCD8;
+}
+
+div.screenshot{
+  margin-left: auto;
+  margin-right: auto;
+}
+div.preview{
+  width: 800px;
+  height: 600px;
+  background-color: black;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+p#title1{
+  /* 共通部分 */
+  color: white;
+  margin: 0 0 0 0;
+  font-family: '游明朝', 'Yu Mincho', YuMincho, 'Hiragino Mincho Pro', serif;
+  width: fit-content;
+  max-height: fit-content;
+  font-weight: bold;
+  position: absolute;
+  /* 縦用の */
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  /* title2だけの要素 */
+  top: 170px;
+  left: 60px;
+  font-size: 100px;
+  font-feature-settings: "palt";
+}
+p#title2{
+  color: white;
+  margin: 0 0 0 0;
+  font-family: '游明朝', 'Yu Mincho', YuMincho, 'Hiragino Mincho Pro', serif;
+  font-weight: bold;
+  position: absolute;
+  font-size: 90px;
+  top: 20px;
+  left: 80px;
+  font-feature-settings: "palt";
+}
+p#title3{
+  color: white;
+  margin: 0 0 0 0;
+  font-family: '游明朝', 'Yu Mincho', YuMincho, 'Hiragino Mincho Pro',serif;
+  top: 400px;
+  left: 200px;
+  
+  font-weight: bold;
+  position: absolute;
+  font-size: 90px;
+  max-height: 800px;
+  max-width: 800px;
+}
+@media screen and (max-width: 768px) {
+  p#service-title{
+    font-size: 50px;
+  }
+  form{
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* 480px以下に適用されるCSS（スマホ用） */
+  p#service-title{
+    width: max-content;
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  input[type='text']{
+    width: 45%;
+  }
+  button{
+    width: 20%;
+  }
+  input[type='button']{
+    width: 75%;
+  }
+  div.preview{
+    width: 400px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  p#title1{
+    font-size: 30px;
+  
+  }
+  p#title2{
+    font-size: 50px;
+    top: 80px;
+  }
+  p#title3{
+    font-size: 50px;
+    top: 130px;
+    left: 70px;
+  }
+}
+@media screen and (max-width: 425px) {
+  form{
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 375px){
+  p#service-title{
+    font-size: 25px;
+  }
+  form{
+    width: 100%;
+    font-size: smaller;
+  }
+  div.preview {
+      width: 300px;
+      height: 225px;
+    }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- interactJSのCDNと実装ファイル -->
+  <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+  <script src="interact.js"></script>
+  <!-- DOM-TO-IMAGEのCDN-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+  <!-- DOM-TO-IMAGEのスクリプト導入-->
+  <script src="dom-to-image.js"></script>
+  <!-- mainJSの実装 -->
+  <script src="main.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous">
+  <!-- 外部共有用の設定 -->
+  <meta property="og:title" content="あのアニメ風タイトルメーカー" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://manga-80f94.web.app/" />
+  <meta property="og:image" content="https://manga-80f94.web.app/public/img/canvas.jpeg" />
+  <meta property="og:description" content="ウェブアプリです" />
+  <meta name="twitter:card" content="summary" />
+  <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+
+  <!-- AdobeFontsの導入 -->
+  <script>
+  (function(d) {
+    var config = {
+      kitId: 'jfk4zgy',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+  </script>
+
+  <!-- CSS実装ファイル -->
+  <link rel="stylesheet" href="css/styles.css">
+  <title>あのアニメ風俳句・川柳メーカー</title>
+</head>
+
+<body>
+  <div class="main">
+    <p id="service-title">アニメ風川柳・俳句メーカー</p>
+    
+    <div class="screenshot">
+      <div class="preview">
+        <p id="title1" class="draggable">暑き日を</p>
+        <p id="title2" class="draggable">海にいれたり</p>
+        <p id="title3" class="draggable">最上川</p>
+      </div>
+    </div>
+
+    <form action="javascript:void(0)">
+      <label>
+        <div></div>
+        <input type="text" id="input1" name="1" placeholder="暑き日を" autocomplete="off">
+        <button id="change-format-input1">90°</button>
+      </label>
+      <label>
+        <input type="text" id="input2" name="2" placeholder="海に入れたり">
+        <button id="change-format-input2">90°</button>
+      </label>
+      <label>
+        <input type="text" id="input3" name="3" placeholder="最上川">
+        <button id="change-format-input3">90°</button>
+      </label>
+      <label>
+        <input id="download-btn" type="button" value="画像をダウンロード">
+      </label>
+    </form>
+
+    
+  </div>
+</body>
+</html>
